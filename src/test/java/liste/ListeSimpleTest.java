@@ -283,6 +283,7 @@ public class ListeSimpleTest {
         listeATester.ajout(2);
         listeATester.ajout(3);
         String avantSupp=listeATester.toString();
+
         listeATester.supprimePremier(9);
         assertEquals(avantSupp,listeATester.toString());
 
