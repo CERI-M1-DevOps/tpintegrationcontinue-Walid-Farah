@@ -1,0 +1,25 @@
+name: "Java CI with Maven - Test and package
+
+on:
+  pull_request: 
+    branches: [main]
+
+jobs: 
+  Salutations:  
+    name: Salutations   
+    runs-on: ubuntu-latest  
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'corretto'
+      - name: Maven
+        run: mvn -B package
+          
+
+
+
+
