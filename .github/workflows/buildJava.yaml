@@ -1,4 +1,4 @@
-name: "Java CI with Maven - Test and package
+name: "Java CI with Maven - Test and package"
 
 on:
   pull_request: 
@@ -18,8 +18,3 @@ jobs:
           distribution: 'corretto'
       - name: Maven
         run: mvn -B package
-          
-
-
-
-
