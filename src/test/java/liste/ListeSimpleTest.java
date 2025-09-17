@@ -266,7 +266,25 @@ public class ListeSimpleTest {
         String liste=listeATester.toString();
 
         assertEquals(liste,listeATester.toString());
+    }
 
+    @Test
+    public void modifieValeurNonExistante(){
+        listeATester.ajout(1);
+        listeATester.ajout(2);
+        String avantSupp=listeATester.toString();
+        listeATester.modifiePremier(9,4);
+        assertEquals(avantSupp,listeATester.toString());
+    }
+
+    @Test
+    public void supprimerNonExistant(){
+        listeATester.ajout(1);
+        listeATester.ajout(2);
+        listeATester.ajout(3);
+        String avantSupp=listeATester.toString();
+        listeATester.supprimePremier(9);
+        assertEquals(avantSupp,listeATester.toString());
 
     }
 }
