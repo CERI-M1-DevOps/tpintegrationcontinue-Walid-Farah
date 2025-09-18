@@ -58,6 +58,7 @@ public class ListeSimple {
             }
             if (courant != null) {
                 precedent.setSuivant(courant.getSuivant());
+
                 size--;
             }
         }
@@ -71,6 +72,7 @@ public class ListeSimple {
         if (tete != null) {
             Noeud suiteListe = supprimeTousRecurs(element, tete.getSuivant());
             if (tete.getElement() == element) {
+
                 size--;
                 return suiteListe;
             } else {
@@ -85,7 +87,9 @@ public class ListeSimple {
             return null;
         else {
             Noeud courant = tete;
+
             Noeud suivant = courant.getSuivant();
+            
             while (suivant.getSuivant() != null) {
                 courant = suivant;
                 suivant = suivant.getSuivant();
